@@ -20,10 +20,10 @@ var server = http.createServer(function (request, response) {
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
     response.write(string)
     response.end()
-  } else if (path === '/main.js') {
-    var string = fs.readFileSync('./main.js', 'utf8')
+  } else if (path === '/main.2.0.js') {
+    var string = fs.readFileSync('./main.2.0.js', 'utf8')
     response.statusCode = 200
-    response.setHeader('Content-Type', 'application/javascript')
+    response.setHeader('Content-Type', 'application/javascript','utf8')
     response.write(string)
     response.end()
   } else if (path === '/xxx') {
